@@ -1,0 +1,81 @@
+TABELA VINCULAR
+
+CREATE TABLE vincular(
+    COD_VIC INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+
+--Cadastro Usuario    
+    nomeUsuarioVic VARCHAR (255),
+    projetoVic VARCHAR (255),
+    nomeMaquinaVic VARCHAR (255),
+--Cadastro CPU   
+    tipoVic VARCHAR (255),
+    marcaMaquinaVic VARCHAR (255),
+    modeloMaquinaVic VARCHAR (255),
+    patrimonioMaquinaVic VARCHAR (255),
+    serviceTagMaquinaVic VARCHAR (255),
+    expressTagMaquinaVic VARCHAR (255),
+--Cadastro Monitor 1
+	marcaMonitor1Vic VARCHAR (255),
+	modeloMonitor1Vic VARCHAR (255),
+   	polegadas1Vic VARCHAR (255),
+   	snMonitor1Vic VARCHAR (255),
+   	serviceTagMonitor1Vic VARCHAR (255),
+   	expressTagMonitor1Vic VARCHAR (255),
+   	patrimonioMonitor1Vic VARCHAR (255),
+--Cadastro Monitor 2 
+	marcaMonitor2Vic VARCHAR (255),
+	modeloMonitor2Vic VARCHAR (255),
+   	polegadas2Vic VARCHAR (255),
+   	snMonitor2Vic VARCHAR (255),
+   	serviceTagMonitor2Vic VARCHAR (255),
+   	expressTagMonitor2Vic VARCHAR (255),
+   	patrimonioMonitor2Vic VARCHAR (255),
+--Cadastro Office
+	anoOfficeVic VARCHAR (255),
+	snOfficeVic VARCHAR (255)
+
+)
+
+
+--TABELA Usuario
+
+CREATE TABLE usuario (
+    COD_USUARIO INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nomeUsuario VARCHAR (255),
+    projeto VARCHAR (255),
+    nomeMaquina VARCHAR (255),
+    dataEntrada VARCHAR(255)
+)
+
+--TABELA CPU
+
+CREATE TABLE cpu (
+    COD_CPU INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tipo VARCHAR (255),
+    marcaMaquina VARCHAR (255),
+    modeloMaquina VARCHAR (255),
+    patrimonioMaquina VARCHAR (255),
+    serviceTagMaquina VARCHAR (255),
+    expressTagMaquina VARCHAR (255)
+)
+
+--TABELA Monitor
+
+CREATE TABLE monitor (
+    COD_CPU INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	marcaMonitor VARCHAR (255),
+	modeloMonitor VARCHAR (255),
+   	polegadas VARCHAR (255),
+   	snMonitor VARCHAR (255),
+   	serviceTagMonitor VARCHAR (255),
+   	expressTagMonitor VARCHAR (255),
+   	patrimonioMonitor VARCHAR (255)
+)
+
+-- TABELA Office
+
+CREATE TABLE office (
+    COD_OFFICE INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	anoOffice VARCHAR (255),
+	snOffice VARCHAR (255)
+)
