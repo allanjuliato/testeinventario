@@ -8,10 +8,10 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top navbar"  >
+    <div class="navbar navbar-inverse navbar-fixed-top navbar">
         <div class="container">
             <div class="navbar-header">
-                 <a href="index.php" class="navbar-brand"  >Home</a>
+                 <a href="index.php" class="navbar-brand">Home</a>
             </div>
             <div>
                 <ul class="nav navbar-nav">

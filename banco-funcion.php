@@ -25,6 +25,12 @@ function buscaVinvular($conexao, $id, $coluna) {
     return mysqli_fetch_assoc($resultado);
 }
 
+function buscaUsuario($conexao, $idUsuario) {
+    $query = "select * from usuario where nomeUsuario = '{$id}'";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}
+
 //Função que Remove uma linha pelo id
 function removeProduto($conexao, $id, $tabela, $coluna) {
     $query = "delete from {$tabela} where {$coluna}= {$id}";

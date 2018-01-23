@@ -1,70 +1,49 @@
+<?php include("cabecalho.php");
+      include("conecta.php");
+      include("banco-funcion.php"); ?>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h5>
+    </div>
 
-<?php
-
-		$con = new PDO('mysql:host=localhost;dbname=daitanit', 'root', '');
-
-?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>pesquisa simples com PDO</title>
-</head>
-
-<body>
-
-<h2>Pesquisa simples com PDO
-</h2>
-<p>
-
-<form name="form1" method="post" action="">
-	<label>
-		<input name="patrimonioMaquina" type="text" id="patrimonioMaquina" value="" size="30">
-	</label>
-	<button class="btn btn-primary" type="submit" name="pesquisar">Pesquisar</button>
-</form>
-
-
-<?php
-
-    $patrimonioMaquina=$_POST["patrimonioMaquina"];
-    $pesquisa=$_POST['pesquisar'];
-
-
-    if(isset($pesquisa)&&!empty($patrimonioMaquina))
-    {
-    $stmt = $con->prepare("select * from cpu where patrimonioMaquina like :letra");
-    $stmt->bindValue(':letra', '%'.$patrimonioMaquina.'%', PDO::PARAM_STR);
-    $stmt->execute();
-    $resultados = $stmt->rowCount();
-
-if($resultados>=1){
-
-echo "Resultado(s) encontrado(s): ".$resultados."<br /><br />";
-while($reg = $stmt->fetch(PDO::FETCH_OBJ))
-{
-
-echo $patrimonioMaquina;
-
-/*echo $reg->tipo."<br />";
-echo $reg->marcaMaquina."<br />";
-echo $reg->modeloMaquina."<br />";
-echo $reg->patrimonioMaquina."<br />";
-echo $reg->serviceTagMaquina."<br />";
-echo $reg->expressTagMaquina."<br />";*/
-}
-
-}
-else
-{
-echo "Não existe usuario cadastrado";
-}
-}
-else{
-echo "Preencha o campo de pesquisa";
-}
-?>
-
-</body>
-</html>
-
-
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+<?php include("rodape.php"); ?>
