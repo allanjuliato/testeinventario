@@ -36,7 +36,7 @@ $dataEntrada = $vincula['dataEntradaVic'];
 $anoOffice = $vincula['anoOfficeVic'];
 $snOffice = $vincula['snOfficeVic'];
 
-?>teste
+?>
 
 <form action="adicionar-vincular.php">
     <div class="panel panel-default">
